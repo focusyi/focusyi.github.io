@@ -1,0 +1,85 @@
+<h2 id="vim操作笔记">vim操作笔记</h2>
+
+<h3 id="三种模式">三种模式</h3>
+<p>vim分为3种模式</p>
+<ul>
+  <li>命令模式，新打开一个文件，自动进入命令模式；输入<code class="highlighter-rouge">i</code>进入<code class="highlighter-rouge">输入模式</code></li>
+  <li>输入模式，输入字符进行编辑；</li>
+  <li>底线命令模式，在命令模式下按下:（英文冒号）就进入了<code class="highlighter-rouge">底线命令模式</code>。</li>
+</ul>
+
+<h3 id="基础操作">基础操作</h3>
+<p><strong>命令模式</strong>
+命令|作用
+—|:–:
+<code class="highlighter-rouge">i</code>,<code class="highlighter-rouge">I</code>|i 为『从当前光标所在处输入』， I 为『在目前所在行的第一个非空格符处开始输入』。 (常用)
+<code class="highlighter-rouge">a</code>,<code class="highlighter-rouge">A</code>|a 为『从当前光标所在的下一个字符处追加』， A 为『从光标所在行的最后一个字符处追加』
+<code class="highlighter-rouge">o</code>,<code class="highlighter-rouge">O</code>|o 为『在当前光标所在的下一行输入』； O 为在当前光标所在处的上一行输入新的一行！
+<code class="highlighter-rouge">r</code>,<code class="highlighter-rouge">R</code>|r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；
+<code class="highlighter-rouge">Esc</code>|退出编辑模式，回到一般模式中(常用)</p>
+
+<p><strong>输入模式</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>命令</th>
+      <th style="text-align: center">作用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">G</code></td>
+      <td style="text-align: center">移动到这个档案的最后一行(常用)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">nG</code></td>
+      <td style="text-align: center">n 为数字。移动到这个档案的第 n 行。</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gg</code></td>
+      <td style="text-align: center">移动到这个档案的第一行，相当于 1G 啊！ (常用)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">n&lt;Enter&gt;</code></td>
+      <td style="text-align: center">n 为数字。光标向下移动 n 行(常用)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">dd</code></td>
+      <td style="text-align: center">删除游标所在的那一整行(常用)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ndd</code></td>
+      <td style="text-align: center">n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行 (常用)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">yy</code></td>
+      <td style="text-align: center">复制游标所在的那一行(常用)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">nyy</code></td>
+      <td style="text-align: center">n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行(常用)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">u</code></td>
+      <td style="text-align: center">撤回操作</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">v</code></td>
+      <td style="text-align: center">v 自定义选择字符；V选择光标所在的行</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>底线命令模式</strong>
+命令|作用
+—|:–:
+<code class="highlighter-rouge">:w</code>|将编辑的数据写入硬盘档案中(常用)
+<code class="highlighter-rouge">:w!</code>|若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！
+<code class="highlighter-rouge">:q</code>|离开 vi (常用)
+<code class="highlighter-rouge">:q!</code>|若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。
+<code class="highlighter-rouge">:set nu</code>|显示行号，设定之后，会在每一行的前缀显示该行的行号
+<code class="highlighter-rouge">:set nonu</code>|与 set nu 相反，为取消行号！
+<code class="highlighter-rouge">/word</code>|向光标之下寻找一个名称为 word 的字符串。(常用)
+<code class="highlighter-rouge">?word</code>	|向光标之上寻找一个字符串名称为 word 的字符串。</p>
+
