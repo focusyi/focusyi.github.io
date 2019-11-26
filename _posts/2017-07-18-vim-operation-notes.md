@@ -1,3 +1,15 @@
+---
+layout: post
+title: Vim学习笔记
+date: 2017-07-18
+Author: yifei
+categories: 
+tags: [Git, vim]
+comments: true
+---
+
+Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。简单的来说，vi是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具。
+
 ## vim操作笔记
 
 ### 三种模式
